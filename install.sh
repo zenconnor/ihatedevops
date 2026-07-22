@@ -5,7 +5,7 @@
 set -eu
 
 REPO_TARBALL="https://github.com/zenconnor/ihatedevops/archive/refs/heads/main.tar.gz"
-SKILL_NAME="ihatedevops"
+SKILL_NAME="devops-best-practices"
 DEST="$HOME/.claude/skills/$SKILL_NAME"
 
 # When run from a checkout, the skill dir sits next to this script.

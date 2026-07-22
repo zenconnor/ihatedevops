@@ -1,5 +1,5 @@
 ---
-name: ihatedevops
+name: devops-best-practices
 description: Use when writing or reviewing anything DevOps-shaped - Dockerfiles or container images, CI/CD pipelines (GitHub Actions etc.), deploy scripts, infrastructure-as-code (Terraform etc.), secrets handling, logging, or release processes - and when the user mentions ihatedevops or asks to set/initialize the project devops mode (solo, team, prototype). Injects 10 atomic best practices, e.g. defaulting to secure Chainguard base images.
 ---
 

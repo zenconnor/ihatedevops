@@ -1,7 +1,7 @@
 {
   "name": "ihatedevops",
   "description": "10 atomic DevOps best practices applied automatically - secure Chainguard base images, pinned dependencies, least-privilege CI, and more. Solo-dev and prototype modes included.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "zenconnor"
   },

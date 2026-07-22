@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "DevOps best practices for Claude Code - the ihatedevops skill.",
-    "version": "0.0.1"
+    "version": "0.0.2"
   },
   "plugins": [
     {

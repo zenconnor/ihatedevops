@@ -22,7 +22,7 @@ check "install.sh exists and is executable" test -x "$ROOT/install.sh"
 if [ -x "$ROOT/install.sh" ]; then
   HOME="$TMP_HOME" sh "$ROOT/install.sh" >/dev/null 2>&1
   check "install exits 0" test $? -eq 0
-  DEST="$TMP_HOME/.claude/skills/ihatedevops"
+  DEST="$TMP_HOME/.claude/skills/devops-best-practices"
   check "SKILL.md installed" test -f "$DEST/SKILL.md"
   check "references installed" test -f "$DEST/references/chainguard-images.md"
   # Idempotent re-run

@@ -18,7 +18,7 @@ curl -fsSL https://raw.githubusercontent.com/zenconnor/ihatedevops/main/install.
 
 That copies one folder into `~/.claude/skills/` — nothing else, ever. Your next
 Claude Code session picks it up automatically. Uninstall:
-`rm -rf ~/.claude/skills/ihatedevops`.
+`rm -rf ~/.claude/skills/devops-best-practices`.
 
 ## The 10 practices
 
@@ -33,7 +33,7 @@ Claude Code session picks it up automatically. Uninstall:
 9. **Fail fast, cache hard in CI** — lint before build before test
 10. **Small, frequent, reversible releases** — boring deploys are the goal
 
-Full rules with examples: [`skills/ihatedevops/SKILL.md`](skills/ihatedevops/SKILL.md)
+Full rules with examples: [`skills/devops-best-practices/SKILL.md`](skills/devops-best-practices/SKILL.md)
 
 ## Tests
 
@@ -51,4 +51,4 @@ multi-stage/non-root patterns (with a no-skill control run for comparison).
 [GPL-3.0](LICENSE) — © 2026 SentryStack Inc.
 
 Works in OpenAI Codex too (open [Agent Skills](https://agentskills.io) standard):
-copy `skills/ihatedevops/` into `~/.agents/skills/`.
+copy `skills/devops-best-practices/` into `~/.agents/skills/`.

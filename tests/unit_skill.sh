@@ -2,8 +2,8 @@
 # Unit tests: validate the skill's structure and required content.
 set -u
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
-SKILL="$ROOT/skills/ihatedevops/SKILL.md"
-REFS="$ROOT/skills/ihatedevops/references/chainguard-images.md"
+SKILL="$ROOT/skills/devops-best-practices/SKILL.md"
+REFS="$ROOT/skills/devops-best-practices/references/chainguard-images.md"
 fails=0
 
 check() { # check <description> <shell test...>
@@ -21,7 +21,7 @@ check "SKILL.md exists" test -f "$SKILL"
 check "chainguard-images.md exists" test -f "$REFS"
 if [ -f "$SKILL" ]; then
   check "frontmatter opens with ---" sh -c "head -1 '$SKILL' | grep -qx -- '---'"
-  check "frontmatter has name: ihatedevops" grep -q "^name: ihatedevops$" "$SKILL"
+  check "frontmatter has name: devops-best-practices" grep -q "^name: devops-best-practices$" "$SKILL"
   check "frontmatter has description:" grep -q "^description: " "$SKILL"
   check "description says when to use (docker)" sh -c "grep '^description:' '$SKILL' | grep -qi docker"
   check "description says when to use (CI)" sh -c "grep '^description:' '$SKILL' | grep -qi 'CI'"

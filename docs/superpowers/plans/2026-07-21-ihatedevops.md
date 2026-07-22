@@ -86,9 +86,9 @@ docs/DEVIATIONS.md                 — how implementation deviated from plan
 
 **Interfaces:**
 - Consumes: `skill/ihatedevops/` layout from Task 2.
-- Produces: `~/.claude/skills/ihatedevops/` install; honors `$HOME`; curl-pipeable (`curl -fsSL <raw url> | sh`) by cloning via git archive/tarball from GitHub when run outside the repo, or copying locally when run inside it.
+- Produces: `~/.claude/skills/devops-best-practices/` install; honors `$HOME`; curl-pipeable (`curl -fsSL <raw url> | sh`) by cloning via git archive/tarball from GitHub when run outside the repo, or copying locally when run inside it.
 
-- [x] **Step 1:** Write `tests/integration_install.sh`: run install.sh with `HOME=$(mktemp -d)` from repo checkout; assert SKILL.md + references land in `$HOME/.claude/skills/ihatedevops/`; re-run to confirm idempotent (overwrite, exit 0).
+- [x] **Step 1:** Write `tests/integration_install.sh`: run install.sh with `HOME=$(mktemp -d)` from repo checkout; assert SKILL.md + references land in `$HOME/.claude/skills/devops-best-practices/`; re-run to confirm idempotent (overwrite, exit 0).
 - [x] **Step 2:** Run it. Expected: FAIL (install.sh missing).
 - [x] **Step 3:** Write install.sh (POSIX sh, `set -eu`): detect local checkout (skill dir next to script) → cp -R; else download tarball `https://github.com/zenconnor/ihatedevops/archive/refs/heads/main.tar.gz` and extract the skill dir. Print friendly success message.
 - [x] **Step 4:** Run integration test. Expected: PASS (local path; tarball path exercised only if network + repo pushed — skip gracefully with a note).
@@ -139,4 +139,4 @@ docs/DEVIATIONS.md                 — how implementation deviated from plan
 
 - Spec coverage: landing page w/ privacy+terms+copyable install+GitHub link (Task 4); skill (Task 2); research (Task 1); top-10 incl. Chainguard (Tasks 1–2); unit/integration/e2e tests (Tasks 2,3,5); rules-compliance via plan doc + DEVIATIONS.md (Task 6). ✓
 - No placeholders beyond research-pending top-10 note, which Task 1 Step 2 resolves. ✓
-- Interface consistency: install path `~/.claude/skills/ihatedevops/`, one-liner URL, skill dir name used identically across Tasks 2–5. ✓
+- Interface consistency: install path `~/.claude/skills/devops-best-practices/`, one-liner URL, skill dir name used identically across Tasks 2–5. ✓

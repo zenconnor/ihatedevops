@@ -21,7 +21,7 @@ PROMPT="Write a Dockerfile for a small Node.js (Express) web server. Reply with 
 
 # --- run with the skill installed at project level ---
 mkdir -p "$WORK/with-skill/.claude/skills"
-cp -R "$ROOT/skills/ihatedevops" "$WORK/with-skill/.claude/skills/"
+cp -R "$ROOT/skills/devops-best-practices" "$WORK/with-skill/.claude/skills/"
 echo "  running claude with skill (this can take a minute)..."
 OUT_SKILL=$(cd "$WORK/with-skill" && claude -p "$PROMPT" --max-turns 8 2>/dev/null)
 echo "$OUT_SKILL" > "$WORK/with-skill-output.txt"
