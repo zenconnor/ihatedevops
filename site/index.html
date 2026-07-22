@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- ga:start (Google tag; __GA_ID__ replaced by scripts/build.sh at deploy) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=__GA_ID__"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '__GA_ID__');
+</script>
+<!-- ga:end -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ihatedevops — devops best practices for Claude Code</title>
+<meta name="description" content="A Claude Code skill that quietly injects 10 atomic DevOps best practices — secure Chainguard images, pinned dependencies, least-privilege CI — into every session.">
+<link rel="canonical" href="https://ihatedevops.com/">
+<meta property="og:title" content="ihatedevops — devops best practices for Claude Code">
+<meta property="og:description" content="A Claude Code skill that quietly injects 10 atomic DevOps best practices into every session. One curl command to install.">
+<meta property="og:url" content="https://ihatedevops.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="style.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ihatedevops",
+  "operatingSystem": "macOS",
+  "applicationCategory": "DeveloperApplication",
+  "description": "A Claude Code skill that injects 10 atomic DevOps best practices — secure Chainguard images, pinned dependencies, least-privilege CI — into every session.",
+  "url": "https://ihatedevops.com/",
+  "sameAs": "https://github.com/zenconnor/ihatedevops",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>🖥️</text></svg>">
+</head>
+<body>
+<div class="wrap">
+  <div class="term">
+    <div class="term-bar">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="term-title">dev@mac — ~/dev — zsh</span>
+    </div>
+    <div class="term-body">
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="amber">whoami</span></div>
+      <div class="line out">someone who does not, in fact, hate devops. devops is just hard.</div>
+      <div class="gap"></div>
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="amber">cat about.txt</span></div>
+      <div class="line out"><h1>ihatedevops</h1></div>
+      <div class="line out">A skill for <a href="https://claude.com/claude-code">Claude Code</a> that quietly injects 10 atomic
+DevOps best practices into every session. Ask for a Dockerfile,
+get secure <span class="prompt">Chainguard images</span>, multi-stage builds, and a non-root
+user — without asking. Ask for a CI pipeline, get SHA-pinned
+actions and least-privilege tokens. That kind of thing.</div>
+      <div class="gap"></div>
+      <a class="gh-star" id="star" href="https://github.com/zenconnor/ihatedevops" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
+        Star on GitHub
+      </a>
+      <div class="gap"></div>
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="amber">./install.sh</span> <span class="dim"># pick your comfort level</span></div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" data-tab="plugin">claude code</button>
+        <button class="tab" role="tab" data-tab="codex">codex</button>
+        <button class="tab" role="tab" data-tab="paste">copy-paste</button>
+        <button class="tab" role="tab" data-tab="curl">one-liner</button>
+      </div>
+      <div class="tab-panel" id="panel-plugin">
+        <div class="install">
+          <code>claude plugin marketplace add zenconnor/ihatedevops &amp;&amp; claude plugin install ihatedevops@ihatedevops</code>
+          <button class="copy-btn" data-copy="claude plugin marketplace add zenconnor/ihatedevops &amp;&amp; claude plugin install ihatedevops@ihatedevops" data-event="install_copy_plugin" aria-label="Copy plugin install command">copy</button>
+        </div>
+        <div class="line dim">the official plugin — gets updates. already inside a claude session? same thing: /plugin marketplace add zenconnor/ihatedevops, then /plugin install ihatedevops@ihatedevops.</div>
+      </div>
+      <div class="tab-panel hidden" id="panel-codex">
+        <div class="install">
+          <code>git clone --depth 1 https://github.com/zenconnor/ihatedevops /tmp/ihd &amp;&amp; mkdir -p ~/.agents/skills &amp;&amp; cp -R /tmp/ihd/skills/ihatedevops ~/.agents/skills/</code>
+          <button class="copy-btn" data-copy="git clone --depth 1 https://github.com/zenconnor/ihatedevops /tmp/ihd &amp;&amp; mkdir -p ~/.agents/skills &amp;&amp; cp -R /tmp/ihd/skills/ihatedevops ~/.agents/skills/" data-event="install_copy_codex" aria-label="Copy Codex install command">copy</button>
+        </div>
+        <div class="line dim">same skill, open Agent Skills standard — Codex reads ~/.agents/skills/. per-project: cp into the repo's .agents/skills/ instead.</div>
+      </div>
+      <div class="tab-panel hidden" id="panel-paste">
+        <div class="install">
+          <code>git clone --depth 1 https://github.com/zenconnor/ihatedevops /tmp/ihd &amp;&amp; mkdir -p ~/.claude/skills &amp;&amp; cp -R /tmp/ihd/skills/ihatedevops ~/.claude/skills/</code>
+          <button class="copy-btn" data-copy="git clone --depth 1 https://github.com/zenconnor/ihatedevops /tmp/ihd &amp;&amp; mkdir -p ~/.claude/skills &amp;&amp; cp -R /tmp/ihd/skills/ihatedevops ~/.claude/skills/" data-event="install_copy_git" aria-label="Copy manual install command">copy</button>
+        </div>
+        <div class="line dim">every step readable: clone, mkdir, copy. no script runs. for one project only, cp into its .claude/skills/ instead.</div>
+      </div>
+      <div class="tab-panel hidden" id="panel-curl">
+        <div class="install">
+          <code>curl -fsSL https://raw.githubusercontent.com/zenconnor/ihatedevops/main/install.sh | sh</code>
+          <button class="copy-btn" data-copy="curl -fsSL https://raw.githubusercontent.com/zenconnor/ihatedevops/main/install.sh | sh" data-event="install_copy_curl" aria-label="Copy curl install command">copy</button>
+        </div>
+        <div class="line dim">fastest. installs one folder into ~/.claude/skills/ — nothing else, ever. <a href="https://github.com/zenconnor/ihatedevops/blob/main/install.sh">read install.sh first</a> if you like.</div>
+      </div>
+      <div class="gap"></div>
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="amber">ls practices/</span></div>
+      <ol class="practices">
+        <li><strong>Chainguard base images by default</strong> <span>— cgr.dev/chainguard/*, free, ~0 CVEs</span></li>
+        <li><strong>Multi-stage builds, non-root user</strong> <span>— build tools never ship</span></li>
+        <li><strong>Pin everything</strong> <span>— lockfiles, image digests, actions by commit SHA</span></li>
+        <li><strong>Least-privilege CI tokens</strong> <span>— explicit permissions: contents: read</span></li>
+        <li><strong>No secrets in code, images, or logs</strong> <span>— OIDC over long-lived keys</span></li>
+        <li><strong>Health checks + rollback-ready deploys</strong> <span>— /healthz, one-step revert</span></li>
+        <li><strong>Plan before apply</strong> <span>— read the diff; never hand-edit live infra</span></li>
+        <li><strong>Structured logs with levels</strong> <span>— JSON events, not print("here 2")</span></li>
+        <li><strong>Fail fast, cache hard in CI</strong> <span>— lint before build before test</span></li>
+        <li><strong>Small, frequent, reversible releases</strong> <span>— boring deploys are the goal</span></li>
+      </ol>
+      <div class="gap"></div>
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="amber">open</span> <a href="https://github.com/zenconnor/ihatedevops">github.com/zenconnor/ihatedevops</a> <span class="dim"># source, issues, PRs</span></div>
+      <div class="gap"></div>
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="cursor"></span></div>
+    </div>
+  </div>
+  <footer>
+    <span>© 2026 SentryStack Inc.</span>
+    <a href="privacy.html">privacy</a>
+    <a href="terms.html">terms</a>
+    <a href="https://github.com/zenconnor/ihatedevops">github</a>
+    <span class="dim">GPL-3.0 licensed</span>
+  </footer>
+</div>
+<script>
+  function track(name) { if (typeof gtag === "function") gtag("event", name); }
+  document.getElementById("star").addEventListener("click", () => track("github_star_click"));
+
+  document.querySelectorAll(".tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
+      document.querySelectorAll(".tab-panel").forEach((p) => p.classList.add("hidden"));
+      tab.classList.add("active");
+      document.getElementById("panel-" + tab.dataset.tab).classList.remove("hidden");
+    });
+  });
+
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      track(btn.dataset.event || "install_copy");
+      const cmd = btn.dataset.copy;
+      try {
+        await navigator.clipboard.writeText(cmd);
+      } catch {
+        // clipboard API unavailable (http, old browser): fall back to a selection copy
+        const ta = document.createElement("textarea");
+        ta.value = cmd;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+      }
+      btn.textContent = "copied ✓";
+      btn.classList.add("copied");
+      setTimeout(() => { btn.textContent = "copy"; btn.classList.remove("copied"); }, 1600);
+    });
+  });
+</script>
+</body>
+</html>

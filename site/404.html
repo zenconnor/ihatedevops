@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- ga:start (Google tag; __GA_ID__ replaced by scripts/build.sh at deploy) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=__GA_ID__"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '__GA_ID__');
+</script>
+<!-- ga:end -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — ihatedevops</title>
+<link rel="stylesheet" href="/style.css?v=3">
+</head>
+<body>
+<div class="wrap">
+  <div class="term">
+    <div class="term-bar">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="term-title">dev@mac — ~/dev — zsh</span>
+    </div>
+    <div class="term-body">
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="amber">cat this-page</span></div>
+      <div class="line out">cat: this-page: No such file or directory</div>
+      <div class="gap"></div>
+      <div class="line out">404 — that path doesn't exist. classic devops.</div>
+      <div class="gap"></div>
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="amber">cd</span> <a href="/">~/ back home</a></div>
+      <div class="gap"></div>
+      <div class="line"><span class="prompt">➜</span> <span class="path">~/dev</span> <span class="cursor"></span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

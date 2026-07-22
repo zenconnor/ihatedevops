@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- ga:start (Google tag; __GA_ID__ replaced by scripts/build.sh at deploy) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=__GA_ID__"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '__GA_ID__');
+</script>
+<!-- ga:end -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>privacy — ihatedevops</title>
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+<div class="wrap doc">
+  <div class="term">
+    <div class="term-bar">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="term-title">privacy.md — less</span>
+    </div>
+    <div class="term-body">
+      <h1>Privacy policy</h1>
+      <p class="updated">Last updated: July 21, 2026</p>
+
+      <h2>The short version</h2>
+      <p>No ads, no accounts, no forms, and we sell nothing about you. We use
+      Google Analytics to see aggregate page stats so we know whether anyone
+      reads this thing.</p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li>Aggregate usage via Google Analytics: pages viewed, referrer,
+        rough geography, device type, and clicks on the install/GitHub
+        buttons. Analytics sets cookies; block them with any content blocker
+        or Google's <a href="https://tools.google.com/dlpage/gaoptout">opt-out</a>
+        and the site works identically.</li>
+        <li>Our hosting provider may keep standard server logs (IP address, user agent,
+        request time) for security and operations. We don't access or use these
+        beyond that.</li>
+      </ul>
+
+      <h2>The install script</h2>
+      <p>The install command downloads files from GitHub and copies one folder to
+      <code class="amber">~/.claude/skills/</code> on your machine. It sends nothing anywhere,
+      phones home to no one, and has no telemetry. It's ~30 lines of shell —
+      <a href="https://github.com/zenconnor/ihatedevops/blob/main/install.sh">read it yourself</a>.</p>
+
+      <h2>Third parties</h2>
+      <p>Downloads are served by GitHub, which has its own
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</p>
+
+      <h2>Changes &amp; contact</h2>
+      <p>If this policy changes, the update lands in the
+      <a href="https://github.com/zenconnor/ihatedevops">git history</a> like everything else.
+      Questions: open an issue on the repo.</p>
+
+      <p><a href="index.html">← back</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
